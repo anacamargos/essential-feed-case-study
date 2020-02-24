@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import EssentialFeed
+import EssentialFeed
 
 class EssentialFeedTests: XCTestCase {
 
