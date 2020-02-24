@@ -14,8 +14,12 @@ public protocol HTTPClient {
 
 final public class RemoteFeedLoader {
     
+    // MARK: - Dependencies
+    
     private let url: URL
     private let client: HTTPClient
+    
+    // MARK: - Initializer
     
     public init(
         url: URL,
@@ -24,6 +28,8 @@ final public class RemoteFeedLoader {
         self.url = url
         self.client = client
     }
+    
+    // MARK: - Public Methods
     
     public func load() {
         client.get(from: url)
