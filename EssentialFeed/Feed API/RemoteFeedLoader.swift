@@ -12,7 +12,7 @@ public protocol HTTPClient {
     func get(from url: URL)
 }
 
-final public class RemoteFeedLoader {
+public final class RemoteFeedLoader {
     
     // MARK: - Dependencies
     
