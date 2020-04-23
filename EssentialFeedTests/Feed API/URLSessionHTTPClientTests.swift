@@ -50,9 +50,13 @@ final class URLSessionSpy: URLSession {
     func stub(url: URL, task: URLSessionDataTask) {
         stubs[url] = task
     }
+    
+    override init() {}
 }
 
-final class FakeURLSessionDataTask: URLSessionDataTask {}
+final class FakeURLSessionDataTask: URLSessionDataTask {
+    override init() {}
+}
 
 final class URLSessionDataTaskSpy: URLSessionDataTask {
     var resumeCallCount = 0
@@ -60,4 +64,6 @@ final class URLSessionDataTaskSpy: URLSessionDataTask {
     override func resume() {
         resumeCallCount += 1
     }
+    
+    override init() {}
 }
